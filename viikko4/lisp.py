@@ -4,7 +4,7 @@ from operator import add, mul
 from typing import Callable, Deque, Dict, Iterable
 
 
-OPERATOR_MAP: Dict[str, Callable[[Iterable], int]] = {
+OPERATOR_MAP: Dict[str, Callable[[int, int], int]] = {
     "+": add,
     "*": mul,
 }
