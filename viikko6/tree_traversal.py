@@ -1,6 +1,5 @@
-from dataclasses import dataclass
 from collections import namedtuple
-from typing import Callable, List
+from typing import List
 
 Node = namedtuple("Node", ["value", "left", "right"])
 
