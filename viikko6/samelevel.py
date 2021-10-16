@@ -8,7 +8,7 @@ def count(node: Node, level: int):
 
     def _count(current_node: Node, current_level: int):
         if current_node is None:
-            return 0
+            return
 
         counter[current_level] += 1
         _count(current_node.left, current_level + 1)
