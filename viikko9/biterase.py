@@ -5,8 +5,7 @@ from functools import lru_cache
 def count(s: str):
     if len(s) == 0:
         return 1
-    if len(s) % 2 != 0:
-        return 0
+
     return sum(
         count(
             s[:i] + s[i + 2 :],
