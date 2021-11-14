@@ -7,9 +7,7 @@ def count(t: List[int]):
     sums = Counter()
     for num in t:
         for current_sum in range(max_sum, -1, -1):
-            if current_sum == 0:
-                sums[num] += 1
-            elif current_sum in sums:
+            if current_sum == 0 or current_sum in sums:
                 sums[current_sum + num] += 1
     return len(sums)
 
