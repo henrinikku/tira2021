@@ -27,10 +27,7 @@ def count(x: int):
         for t5, w5 in tasks_ways_map.items()
         for t6, w6 in tasks_ways_map.items()
         for t7, w7 in tasks_ways_map.items()
-        if (
-            all(i >= 5 for i in (t1, t2, t3, t4, t5, t6, t7))
-            and sum((t1, t2, t3, t4, t5, t6, t7)) == x
-        )
+        if sum((t1, t2, t3, t4, t5, t6, t7)) == x
     )
 
 
