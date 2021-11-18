@@ -1,5 +1,5 @@
 from collections import deque
-from typing import Dict, List
+from typing import List
 
 WALL = "#"
 FLOOR = "."
@@ -23,7 +23,7 @@ def count(r: List[str]):
     out = 0
     for y in range(n):
         for x in range(m):
-            if r[y][x] == "#" or (y, x) in seen:
+            if r[y][x] == WALL or (y, x) in seen:
                 continue
             out += 1
             queue = deque(neighbours(r, n, m, y, x))
