@@ -11,6 +11,9 @@ class Coloring:
         self.neighbours[b].append(a)
 
     def check(self):
+        return all(self._check_component(x) for x in self._components())
+
+    def _components(self):
         visited = set()
         for node, neighbours in self.neighbours.items():
             if node in visited:
@@ -27,10 +30,7 @@ class Coloring:
                 queue.extend(self.neighbours[current_node])
                 component[current_node] = self.neighbours[current_node]
 
-            if not self._check_component(component):
-                return False
-
-        return True
+            yield component
 
     def _check_component(self, component: Dict[int, List[int]]):
         if not component:
