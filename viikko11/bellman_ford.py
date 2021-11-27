@@ -10,7 +10,7 @@ INF = 2 ** 63
 
 
 def bellman_ford(edges: List[Edge]):
-    dist = {i: 1 if i == 1 else INF for i in range(1, N + 1)}
+    dist = {i: 0 if i == 1 else INF for i in range(1, N + 1)}
     changed = True
     while changed:
         changed = False
