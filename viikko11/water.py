@@ -49,8 +49,7 @@ def count(a: int, b: int, x: int):
 
         seen.add(buckets)
 
-    out = min(dist.get((x, 0), INF), dist.get((x, b), INF))
-    return -1 if out == INF else out
+    return min([v for k, v in dist.items() if k.a == x] or [-1])
 
 
 if __name__ == "__main__":
