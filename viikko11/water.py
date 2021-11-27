@@ -1,7 +1,7 @@
 import heapq
 from collections import namedtuple
 
-Buckets = namedtuple("State", ["a", "b"])
+Buckets = namedtuple("Buckets", ["a", "b"])
 
 INF = 2 ** 63
 
