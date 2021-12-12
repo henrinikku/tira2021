@@ -2,7 +2,6 @@ class Components:
     def __init__(self, n: int):
         self.parent = {x: x for x in range(1, n + 1)}
         self.size = {x: 0 for x in range(1, n + 1)}
-        self.components = n
 
     def root(self, x: int):
         while x != self.parent[x]:
